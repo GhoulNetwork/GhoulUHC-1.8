@@ -1,0 +1,42 @@
+# Should some players automatically be whitelisted?
+whitelist:
+  default: false
+  players:
+    -
+
+# List of gamemodes to be enabled on config load
+enabledGamemodes:
+
+values:
+  # Final Heal
+  healTime: 5
+  # PvP Enable
+  pvpTime: 15
+  # When first border shrink will happen
+  borderTime: 20
+  # Time after match is scheduled to start
+  startTime: 5
+  # How long should we wait to unmute the game chat?
+  unMuteChatTime: 0
+  # Time after final shrink before deathmatch is force start
+  deathmatchTime: 5
+  # How long should scatter take (Added to time needed to scatter)
+  scatterCountdown: 10
+  # Should teams be enabled?
+  teams: false
+  # The teamsize
+  teamSize: 2
+  # Should shears drop apples?
+  shears: true
+  # Should beds explode?
+  bedBombs: true
+  # Should nether be enabled?
+  nether: false
+  # Max slots for the server
+  slots: 200
+  # How many steak should players start with
+  startFood: 8
+  # The % rate of apple drops
+  appleRatePercent: 5
+  # Whether antiburn is enabled
+  antiBurn: true

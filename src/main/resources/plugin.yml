@@ -1,0 +1,126 @@
+name: cUHC
+main: net.raauhh.uhc.UHC
+version: 4.0
+author: oflords - fork by Ingenio
+depend:
+  - WorldBorder
+  - GhoulCore
+  - GhoulDisguise
+  - rCore
+  - LuckPerms
+softdepend:
+  - JSC
+  - TerrainControl
+  - Vault
+commands:
+  uhc:
+    permission: uhc.command.uhc
+  respawn:
+    permission: uhc.command.respawn
+  exclusive:
+    permission: uhc.command.exclusive
+  heal:
+    permission: uhc.command.heal
+  team:
+    aliases:
+      - party
+  teamlist:
+    aliases:
+      - tl
+  sendcoords:
+    aliases:
+      - sc
+      - teamcoords
+      - tc
+  teamchat:
+    aliases:
+      - tc
+  whitelist:
+    permission: uhc.command.whitelist
+    aliases:
+      - wl
+  assignation:
+    permission: uhc.command.assignation
+    aliases:
+      - assign
+  helpop:
+  configuration:
+    aliases:
+      - config
+  killcount:
+    aliases:
+      - kc
+  killtop:
+    aliases:
+      - kt
+      - bestkillers
+      - topkills
+  gamemodes:
+    aliases:
+      - scenarios
+  practice:
+  leaderboard:
+    aliases:
+      - lb
+  freeze:
+    permission: uhc.command.freeze
+    aliases:
+      - ss
+      - screenshare
+  statistics:
+    aliases:
+      - stats
+  teleport:
+    permission: uhc.command.teleport
+    aliases:
+      - tp
+      - tele
+  latescatter:
+    permission: uhc.command.latescatter
+    aliases:
+      - latejoin
+  giveall:
+    permission: uhc.command.giveall
+  give:
+    permission: uhc.command.give
+  disqualify:
+    permission: uhc.command.disqualify
+  backpack:
+    aliases:
+      - bp
+      - teaminventory
+  list:
+  reroll:
+  health:
+    aliases:
+      - h
+  togglespectatorchat:
+    permission: uhc.command.togglespectatorchat
+    aliases:
+      - togglespecchat
+      - tsc
+  hc:
+    permission: uhc.command.staffchat
+  removelogger:
+    permission: uhc.command.removelogger
+  healall:
+    permission: uhc.command.healall
+  border:
+    permission: uhc.command.border
+  removeentities:
+    permission: uhc.command.removeentities
+    aliases:
+      - killentities
+  mole:
+  mlg:
+  info:
+    aliases:
+      - information
+  deathteleport:
+    aliases:
+      - dtp
+  combatloggerlist:
+    permission: uhc.command.uhc
+  lunarclient:
+    permission: uhc.command.uhc
+  pvp:

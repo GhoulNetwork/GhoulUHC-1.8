@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.raauhh</groupId>
+    <artifactId>GhoulUHC</artifactId>
+    <packaging>jar</packaging>
+    <version>3.8</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.twitter4j</groupId>
+            <artifactId>twitter4j-core</artifactId>
+            <version>4.0.7</version>
+        </dependency>
+
+        <!-- PaperSpigot 1.7 -->
+        <dependency>
+            <groupId>org.spigot</groupId>
+            <artifactId>spigot-server</artifactId>
+            <version>1.7.10-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/spigot.jar</systemPath>
+        </dependency>
+
+        <!-- LuckyPerms 1.7 -->
+        <dependency>
+            <groupId>net.ghoul</groupId>
+            <artifactId>luckyperms</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/LuckPerms-Bukkit-Legacy-5.1.18.jar</systemPath>
+        </dependency>
+
+        <!-- Disguise 1.7 -->
+        <dependency>
+            <groupId>net.ghoul</groupId>
+            <artifactId>disguise</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/GhoulDisguise.jar</systemPath>
+        </dependency>
+
+        <!-- Hom0 1.7 -->
+        <dependency>
+            <groupId>net.ghoul</groupId>
+            <artifactId>homo</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Holograms.jar</systemPath>
+        </dependency>
+
+        <!-- LC API 1.7 -->
+        <dependency>
+            <groupId>net.ghoul</groupId>
+            <artifactId>lc</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/lunarclient-api.jar</systemPath>
+        </dependency>
+
+        <!-- World Border -->
+        <dependency>
+            <groupId>com.wimbli</groupId>
+            <artifactId>WorldBorder</artifactId>
+            <version>1.8.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/WorldBorder.jar</systemPath>
+        </dependency>
+
+        <!-- rCore -->
+        <dependency>
+            <groupId>me.ryzeon.rcore</groupId>
+            <artifactId>rCoreSpigot</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/rCore-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>org.twitter4j</id>
+            <url>https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>inventive-repo</id>
+            <url>https://repo.inventivetalent.org/content/repositories/releases</url>
+        </repository>
+    </repositories>
+
+    <build>
+<!--        <finalName>GhoulUHC-${project.version}</finalName>-->
+        <finalName>GhoulUHC</finalName>
+        <defaultGoal>clean install</defaultGoal>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <version>3.6.2</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.0.0</version>
+
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <shadedArtifactAttached>false</shadedArtifactAttached>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
